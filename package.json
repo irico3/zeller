@@ -1,0 +1,34 @@
+{
+  "name": "zeller",
+  "version": "1.0.0",
+  "description": "Find the exact day of the week after the Western calendar.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "test": "jest",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takanokana/zeller.git"
+  },
+  "keywords": [
+    "zeller",
+    "dayOfWeek"
+  ],
+  "author": "takanokana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/takanokana/zeller/issues"
+  },
+  "homepage": "https://github.com/takanokana/zeller#readme",
+  "dependencies": {
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "jest": "^27.4.3",
+    "ts-jest": "^27.1.0"
+  }
+}
