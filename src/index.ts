@@ -13,11 +13,13 @@ export default (year: number, month: number, day: number) => {
 
 const getDayNumber = (year: number, month: number, day: number) => {
   const dateString =
-    year.toString().padStart(4) +
-    month.toString().padStart(2) +
-    day.toString().padStart(2);
+    year.toString().padStart(4, "0") +
+    month.toString().padStart(2, "0") +
+    day.toString().padStart(2, "0");
 
-  // TODO: 日付が正しいフォーマットかのチェック
+  //simple format check
+  if (month > 12 || day > 31 || month < 1 || day < 1)
+    throw new Error(`Invalid date. date:${year}/${month}/${day}`);
 
   // Gregorian
   if (dateString > POINT_DAY.startGregorian) {
@@ -78,6 +80,7 @@ const zellersCongruence = (
   }
 
   const h =
-    day + Math.floor((26 * (month + 1)) / 10) + Y + Math.floor(Y / 4) + l;
+    (day + Math.floor((26 * (month + 1)) / 10) + Y + Math.floor(Y / 4) + l) % 7;
+
   return h;
 };
