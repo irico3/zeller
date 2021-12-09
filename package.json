@@ -1,5 +1,5 @@
 {
-  "name": "zeller",
+  "name": "@iricocco/zeller",
   "version": "1.0.0",
   "description": "Find the exact day of the week after the Western calendar.",
   "main": "index.js",
